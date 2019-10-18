@@ -7,15 +7,10 @@
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
   </div>
-  
-
-  
-  <div> Total: <%= humanized_money_with_symbol @order.total_cents/100.00 %> </div>
-  <div> Email: <%= @order.email %> </div>
-
 
 <table>
   <tr>
+    <th>Image </th>
     <th>Item name  </th>
     <th>Description </th>
     <th>Quantity  </th>
@@ -32,7 +27,8 @@
   <% end %>
   </table>
 
-
+  <div> Total: <%= humanized_money_with_symbol @order.total_cents/100.00 %> </div>
+  <div> Email: <%= @order.email %> </div>
   
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
